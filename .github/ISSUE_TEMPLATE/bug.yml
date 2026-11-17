@@ -1,0 +1,45 @@
+name: Баг
+description: Дефект — заголовок, шаги, ожидаемое, фактическое, окружение и улика.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Заголовок Issue — что сломалось и где, одной строкой. Ниже — по полю на каждую часть баг-репорта.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги
+      description: Нумерованный список, одно действие в строке — с самого начала (вход, «Сбросить мои данные»).
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое
+      description: Что должно быть по требованию — с номером требования (Т…).
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактическое
+      description: Что показал магазин — надписи и суммы с экрана дословно.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Окружение
+      description: Браузер и его версия, операционная система, размер окна, версия магазина из подвала.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Улика
+      description: Ответ сервера, текст ошибки или строка журнала — в блоке кода, чтобы текст остался буква в букву.
